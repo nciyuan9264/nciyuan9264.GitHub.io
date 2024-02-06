@@ -9,6 +9,9 @@ import { alpha } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
+// import { RouterLink } from 'src/routes/components';
+import { Link as ReactLink } from 'react-router-dom';
+
 import { fDate } from 'src/utils/format-time';
 import { fShortenNumber } from 'src/utils/format-number';
 
@@ -48,6 +51,8 @@ export default function PostCard({ post, index }) {
 
   const renderTitle = (
     <Link
+      component={ReactLink}
+      to='/user'
       color="inherit"
       variant="subtitle2"
       underline="hover"

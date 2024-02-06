@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------
 
 export const account = {
-  displayName: 'Jaydon Frankie',
-  email: 'demo@minimals.cc',
+  displayName: 'Zhenyu Wang',
+  email: '1522457543@qq.com',
   photoURL: '/assets/images/avatars/avatar_25.jpg',
 };
