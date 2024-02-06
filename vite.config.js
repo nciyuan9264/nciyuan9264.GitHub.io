@@ -2,6 +2,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import checker from 'vite-plugin-checker';
+// import Markdown from 'vite-plugin-md'
 
 // ----------------------------------------------------------------------
 
@@ -13,6 +14,15 @@ export default defineConfig({
         lintCommand: 'eslint "./src/**/*.{js,jsx,ts,tsx}"',
       },
     }),
+    {
+      name: "markdown-loader",
+      transform(code, id) {
+        if (id.slice(-3) === ".md") {
+          // For .md files, get the raw content
+          return `export default ${JSON.stringify(code)};`;
+        }
+      }
+    }
   ],
   resolve: {
     alias: [

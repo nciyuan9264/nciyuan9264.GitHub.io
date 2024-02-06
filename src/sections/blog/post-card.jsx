@@ -52,7 +52,7 @@ export default function PostCard({ post, index }) {
   const renderTitle = (
     <Link
       component={ReactLink}
-      to='/user'
+      to='/products'
       color="inherit"
       variant="subtitle2"
       underline="hover"
